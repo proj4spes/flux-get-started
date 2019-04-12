@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: podinfo
-  namespace: demo
+  namespace: default
   labels:
     app: podinfo
   annotations:
@@ -47,7 +47,7 @@ spec:
         - --random-error=false
         env:
         - name: PODINFO_UI_COLOR
-          value: green
+          value: blue
         livenessProbe:
           httpGet:
             path: /healthz
